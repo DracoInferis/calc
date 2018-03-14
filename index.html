@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora de Montos</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,600,800" rel="stylesheet">
+    </head>
+
+    <body>
+        <h3 onclick="self.close()">✖</h3>
+        <div class="container">
+            <header>
+                <h2>CALCULADORA DE MONTOS</h2>
+            </header>
+
+            <section class="left">
+                <p>MONTO A PAGAR</p>
+                <br />
+                <input type="number" name="montoPesos" id="monto" />
+                <br />
+                <form name="calcuMon">
+                <p>TARJETA</p>
+                <br />
+                <select name="creditCard" id="tarjetaCredito">
+                    <option value="" disabled selected hidden>SELECCIONE TARJETA...</option>
+                    <option value="visa">VISA</option>
+                    <option value="master">MASTERCARD</option>
+                </select>
+                <br />
+                <p>CUOTAS</p>
+                <br />
+                <select name="cuotas" id="numCuotas">
+                    <option value="" disabled selected hidden>CANTIDAD DE CUOTAS...</option>
+                    <option value="3">3 CUOTAS</option>
+                    <option value="6">6 CUOTAS</option>
+                    <option value="12">12 CUOTAS</option>
+                </select>
+                </form>
+                <br />
+                <button value="send" class="button">CALCULAR</button>
+            </section>
+
+            <section class="right">
+                <table>
+                    <thead>
+                        <th>MONTO TOTAL FINANCIADO</th>
+                        <th>MONTO CUOTAS</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="mtf">$ </td>
+                            <td id="mcf">$ </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <footer></footer>
+        </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script src='js/main.js'></script> 
+    </body>
+</html>
